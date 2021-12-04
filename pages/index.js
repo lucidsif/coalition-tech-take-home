@@ -139,7 +139,7 @@ export default function Home() {
           /> 
           
           <span>
-              COPYRIGHT 2016. ALL RIGHTS RESERVED
+              COPYRIGHT 2016. ALL RIGHTS RESERVED. CODED BY SIF, ROMANA'S HUSBAND.
           </span>
         </div>
 
