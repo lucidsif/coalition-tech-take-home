@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link'
 
 export default class Head extends React.Component {
     render() {
@@ -8,17 +7,14 @@ export default class Head extends React.Component {
                 <title>Tawsif's Coalition Technologies Project</title>
                 <link rel="icon" href="/favicon.ico" />
                 <img 
+                    id="header-logo"
                     src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
                     height="50"
                     width="50"
                     alt="Coalition Technologies logo"
                 />
-                <Link href="/history">
-                    <a>01. HISTORY</a>
-                </Link>
-                <Link href="/team">
-                    <a>02. TEAM</a>
-                </Link>
+                <a href="#history">01. HISTORY</a>
+                <a href="#team">02. TEAM</a>
             </div>
         )
     }

@@ -1,16 +1,19 @@
 import React from 'react';
-import Link from "next/link";
 
 export default class Footer extends React.Component {
     render () {
         return (
             <div>
-                <Link href="/history">
-                    <a>01. HISTORY</a>
-                </Link>
-                <Link href="/team">
-                    <a>02. TEAM</a>
-                </Link>
+                <img 
+                    id="footer-logo"
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+                    height="50"
+                    width="50"
+                    alt="Coalition Technologies logo"
+                />
+                <span>
+                    COPYRIGHT 2016. ALL RIGHTS RESERVED
+                </span>
             </div>
         )
     }
