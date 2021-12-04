@@ -110,6 +110,11 @@ export default function Home() {
             src="/team-pre-bg-img.png"
           />
 
+          <p style={{position: 'absolute', top: '20px', left: '630px'}}>
+            Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac,
+            tristique ut quam. Vivamus suscipit dignissim tortor nec congue.
+          </p>
+
           <div className="tab-switcher">
             <div className={tabNoSelected === 1 ? 'tab tab-selected' : 'tab'} onClick={() => setSelectedTab(1)}>
               <span>MOUNTAIN 1</span>
@@ -123,26 +128,28 @@ export default function Home() {
             id="team-bg"
             src="/bg-pic-3.png"
           />
+        
+        <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '20px', marginBottom: '20px'}}>
+          <img 
+            id="footer-logo"
+            src="/footer-logo.png"
+            height="50"
+            width="50"
+            alt="Coalition Technologies logo"
+          /> 
+          
+          <span>
+              COPYRIGHT 2016. ALL RIGHTS RESERVED
+          </span>
+        </div>
 
         </div>
         {/* Team section */}
 
-        <div>
-          {/* <img 
-            id="footer-logo"
-            src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
-            height="50"
-            width="50"
-            alt="Coalition Technologies logo"
-          /> */}
-          {/* <span>
-              COPYRIGHT 2016. ALL RIGHTS RESERVED
-          </span> */}
-        </div>
 
       </main>
-
-      {/* <footer>
+{/* 
+      <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
