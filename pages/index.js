@@ -1,9 +1,14 @@
+import { useState } from "react"
+
+
 export default function Home() {
+  const [carouselImgSelectedNo, setCarouselSelectedImg ] = useState(1)
   return (
     <div className="container">
 
       <main>
         <title>Tawsif's Coalition Technologies Project</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' />
         <link rel="icon" href="/favicon.ico" />
         <div className="header-nav top">
             <img 
@@ -13,7 +18,7 @@ export default function Home() {
                 width="50"
                 alt="Coalition Technologies logo"
             />
-            <div style={{display: 'flex', justifyContent: 'space-between', width: '30%'}}>
+            <div className="header-link-container" style={{display: 'flex', justifyContent: 'space-around', width: '30%'}}>
                 <a className="header-link" href="#history">01. HISTORY</a>
                 <a className="header-link" href="#team">02. TEAM</a>
             </div>
@@ -39,24 +44,72 @@ export default function Home() {
               style={{marginLeft: '5px'}}
             />
           </div>
-          <div style={{display: 'flex', justifyContent: 'space-between', width: '30%'}}>
+          <div style={{display: 'flex', justifyContent: 'space-around', width: '30%'}}>
             <a className="header-link" href="#history" style={{color: 'black'}}>01. HISTORY</a>
             <a className="header-link" href="#team" style={{color: 'black'}}>02. TEAM</a>
           </div>
         </div>
 
-        <div>
-          <img 
-              id="footer-logo"
-              src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
-              height="50"
-              width="50"
-              alt="Coalition Technologies logo"
+        <div id="history">
+          <img
+            id="history"
+            src="/bg-pic-2.png"
           />
-          <span>
-              COPYRIGHT 2016. ALL RIGHTS RESERVED
-          </span>
+        
+          <div className="history-text-container">
+            <p style={{fontFamily: 'Lato, sans-serif', fontSize: '16px', fontWeight: 400, color: '#16181b'}}>
+              Lorem ipsum dolor si amet, consectetur adipiscing elit. Proin in ante viverra, retrum erat rutrum, consecutur mi. Proin at
+              maximumus est. Nullam purus sex, iaculis sed erat set blandit tincidunt quam. Cras scelerisque id quam sed dignisiim
+              Pellentesque urna nunc, gravida quis hendrerit ac, tritisque ut quam. Vivamus suscipit dignissim tortor nec congue.
+            </p>
+          </div>
+
+          <img 
+            id="carousel-bg"
+            src="/carousel-bg.png"
+          />
+          <div id="carousel">
+            <img
+              className="carousel-image"
+              src="/carousel-image1.png"
+              style={carouselImgSelectedNo === 1 ? {border: '2px solid black', opacity: 1.0} : {}}
+              onClick={() => setCarouselSelectedImg(1)}
+            />
+            <img
+              className="carousel-image"
+              src="/carousel-image2.png"
+              style={carouselImgSelectedNo === 2 ? {border: '2px solid black', opacity: 1.0} : {}}
+              onClick={() => setCarouselSelectedImg(2)}
+            />
+            <img
+              className="carousel-image"
+              src="/carousel-image3.png"
+              style={carouselImgSelectedNo === 3 ? {border: '2px solid black', opacity: 1.0} : {}}
+              onClick={() => setCarouselSelectedImg(3)}
+            />
+            <img 
+              className="carousel-image"
+              src="/carousel-image4.png"
+              style={carouselImgSelectedNo === 4 ? {border: '2px solid black', opacity: 1.0} : {}}
+              onClick={() => setCarouselSelectedImg(4)}
+            />
+          </div>
+        
         </div>
+
+        <div>
+          {/* <img 
+            id="footer-logo"
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+            height="50"
+            width="50"
+            alt="Coalition Technologies logo"
+          /> */}
+          {/* <span>
+              COPYRIGHT 2016. ALL RIGHTS RESERVED
+          </span> */}
+        </div>
+
       </main>
 
       {/* <footer>
@@ -87,6 +140,29 @@ export default function Home() {
                 z-index: 1;
                 width: 100%;
             }
+            
+            .history-text-container {
+              position: absolute;
+              left: 395px;
+              top: 1070px;
+              z-index: 1;
+              width: 57%;
+            }
+            #carousel-bg {
+              position: absolute;
+              top: 1600px;
+              left: 0px;
+            }
+            #carousel {
+              position: absolute;
+              top: 1620px;
+              left: 350px;
+              z-index: 2;
+              display: flex;
+            }
+          .carousel-image {
+            opacity: 0.4
+          }
         `}
         </style>
 
