@@ -1,58 +1,62 @@
-// import Head from 'next/head'
-import Head from '../components/Head.js'
-import Footer from '../components/Footer.js'
-import History from '../components/History.js'
-import Team from '../components/Team.js'
-
 export default function Home() {
   return (
     <div className="container">
 
-      <Head />
-
       <main>
-        <History />
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <title>Tawsif's Coalition Technologies Project</title>
+        <link rel="icon" href="/favicon.ico" />
+        <div className="header-nav top">
+            <img 
+                id="header-logo"
+                src="/header-logo.png"
+                height="50"
+                width="50"
+                alt="Coalition Technologies logo"
+            />
+            <div style={{display: 'flex', justifyContent: 'space-between', width: '30%'}}>
+                <a className="header-link" href="#history">01. HISTORY</a>
+                <a className="header-link" href="#team">02. TEAM</a>
+            </div>
         </div>
 
-        <Team />
+        <img src="/bg-pic-1.png" />
 
-        <Footer />
+        <div className="header-nav">
+          <div>
+            <img
+              id="body-logo"
+              src="/body-logo.png"
+              height="50"
+              width="50"
+              alt="Coalition Technologies body logo"
+            />
+            <img
+              id="body-logo-text"
+              src="/body-logo-text.svg"
+              height="50"
+              width="50"
+              alt="Coalition Technologies body logo"
+              style={{marginLeft: '5px'}}
+            />
+          </div>
+          <div style={{display: 'flex', justifyContent: 'space-between', width: '30%'}}>
+            <a className="header-link" href="#history" style={{color: 'black'}}>01. HISTORY</a>
+            <a className="header-link" href="#team" style={{color: 'black'}}>02. TEAM</a>
+          </div>
+        </div>
+
+        <div>
+          <img 
+              id="footer-logo"
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+              height="50"
+              width="50"
+              alt="Coalition Technologies logo"
+          />
+          <span>
+              COPYRIGHT 2016. ALL RIGHTS RESERVED
+          </span>
+        </div>
       </main>
 
       {/* <footer>
@@ -67,6 +71,26 @@ export default function Home() {
       </footer> */}
 
       <style jsx>{`
+            .header-nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 10px;
+            }
+            .header-link {
+                color: white
+            }
+            .top {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: 1;
+                width: 100%;
+            }
+        `}
+        </style>
+
+      {/* <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -195,7 +219,7 @@ export default function Home() {
             flex-direction: column;
           }
         }
-      `}</style>
+      `}</style> */}
 
       <style jsx global>{`
         html,
