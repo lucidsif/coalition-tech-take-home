@@ -213,10 +213,12 @@ export default function Home() {
          
           .tab {
             display: flex;
-            align-items: center
+            align-items: center;
             height: 100%;
+            min-height: 50px;
             color: white;
             margin-left: 20px;
+            padding: 0 20px;
           }
           .tab-selected {
             background-color: #b0b4be
