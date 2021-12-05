@@ -4,6 +4,18 @@ import { useState } from "react"
 export default function Home() {
   const [ carouselImgSelectedNo, setCarouselSelectedImg ] = useState(1)
   const [ tabNoSelected, setSelectedTab ] = useState(1)
+
+  const prevImg = () => {
+    if (carouselImgSelectedNo !== 1) {
+      setCarouselSelectedImg(carouselImgSelectedNo - 1)
+    }
+  }
+  const nextImg = () => {
+    if (carouselImgSelectedNo !== 4) {
+      setCarouselSelectedImg(carouselImgSelectedNo + 1)
+    }
+  }
+
   return (
     <div className="container">
 
@@ -99,6 +111,19 @@ export default function Home() {
               onClick={() => setCarouselSelectedImg(4)}
             />
           </div> 
+          <div id="mobile-carousel">
+            <button onClick={prevImg}>
+              `{'<'}`
+            </button>
+            <img
+              id="mobile-carousel-img"
+              src={`/carousel-image${carouselImgSelectedNo}.png`}
+            />
+            <button onClick={nextImg}>
+              `{'>'}`
+            </button>
+
+          </div>
         </div>
         {/* History section */}
 
@@ -190,13 +215,51 @@ export default function Home() {
               top: 1600px;
               left: 0px;
             }
-            #carousel {
+          @media screen and (min-width: 1001px) {
+              #mobile-carousel {
+                display: none;
+              }
+              #carousel {
+                display: flex;
+                position: absolute;
+                top: 1620px;
+                left: 350px;
+                z-index: 2;
+              }
+            }
+          @media screen and (min-width: 300px) and (max-width: 1000px) {
+            #mobile-carousel {
+              display: flex;
+              align-items: center;
               position: absolute;
               top: 1620px;
-              left: 350px;
+              left: 300px;
               z-index: 2;
-              display: flex;
             }
+            #carousel {
+              display: none;
+            }
+            .carousel-image {
+              display: none;
+            }
+          }
+          @media screen and (min-width: 300px) and (max-width: 600px) {
+            #mobile-carousel {
+              display: flex;
+              align-items: center;
+              position: absolute;
+              top: 1620px;
+              left: 100px;
+              z-index: 2
+            }
+            #carousel {
+              display: none;
+            }
+            .carousel-image {
+              display: none;
+            }
+          }
+        
           .carousel-image {
             opacity: 0.4
           }
